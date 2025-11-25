@@ -41,7 +41,7 @@ HyTracker provides a fluid, native iOS interface.
 
 | Feature | Description |
 | :--- | :--- |
-| ![Search](.github/assets/search_showcase.mp4) | **Smart Search & History**: Enter a username to fetch their UUID via Mojang. Recent searches are automatically saved locally using **SwiftData** for instant access later. |
+| ![Search](.github/assets/search_showcase.gif) | **Smart Search & History**: Enter a username to fetch their UUID via Mojang. Recent searches are automatically saved locally using **SwiftData** for instant access later. |
 | ![Dashboard](.github/assets/visual_dashboard.png) | **Visual Dashboard**: Displays the player's 3D head (via Crafatar), their real-time **Hypixel Rank** (VIP, MVP++, etc.) with correct color codes, and their Network Level progress. |
 | ![Stats](.github/assets/game_statistics.png) | **Game Statistics**: A responsive grid layout showing deep stats for **Bedwars** and **SkyWars**. Includes calculated metrics like **K/D Ratio** and Win counts. |
 
