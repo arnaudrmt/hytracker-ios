@@ -1,0 +1,33 @@
+# --- Mac OS ---
+.DS_Store
+
+# --- Xcode ---
+# User settings
+*.xcuserdata/
+*.xcuserstate
+*.xcbkptlist
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.presentableId
+
+# Build generated files
+build/
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# CocoaPods
+Pods/
