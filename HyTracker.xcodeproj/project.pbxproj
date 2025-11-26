@@ -8,19 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		517AA1462ED657150003819F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 517AA1452ED657150003819F /* README.md */; };
+		51F9D2462ED74C9400E78041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F9D2442ED74C9400E78041 /* Assets.xcassets */; };
+		51F9D2472ED74C9400E78041 /* HyTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D2332ED74C9400E78041 /* HyTrackerApp.swift */; };
+		51F9D2482ED74C9400E78041 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D2352ED74C9400E78041 /* GameType.swift */; };
+		51F9D2492ED74C9400E78041 /* RecentPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D2362ED74C9400E78041 /* RecentPlayer.swift */; };
+		51F9D24A2ED74C9400E78041 /* HypixelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D2382ED74C9400E78041 /* HypixelAPI.swift */; };
+		51F9D24B2ED74C9400E78041 /* MojangAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D2392ED74C9400E78041 /* MojangAPI.swift */; };
+		51F9D24C2ED74C9400E78041 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D23B2ED74C9400E78041 /* PlayerViewModel.swift */; };
+		51F9D24D2ED74C9400E78041 /* GameCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D23D2ED74C9400E78041 /* GameCardView.swift */; };
+		51F9D24E2ED74C9400E78041 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D23F2ED74C9400E78041 /* GameDetailView.swift */; };
+		51F9D24F2ED74C9400E78041 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D2402ED74C9400E78041 /* HomeView.swift */; };
+		51F9D2502ED74C9400E78041 /* PlayerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D2412ED74C9400E78041 /* PlayerProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		510807B02ED5F2B00011629C /* HyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		517AA1452ED657150003819F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		51F9D2332ED74C9400E78041 /* HyTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyTrackerApp.swift; sourceTree = "<group>"; };
+		51F9D2352ED74C9400E78041 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
+		51F9D2362ED74C9400E78041 /* RecentPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPlayer.swift; sourceTree = "<group>"; };
+		51F9D2382ED74C9400E78041 /* HypixelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypixelAPI.swift; sourceTree = "<group>"; };
+		51F9D2392ED74C9400E78041 /* MojangAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MojangAPI.swift; sourceTree = "<group>"; };
+		51F9D23B2ED74C9400E78041 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		51F9D23D2ED74C9400E78041 /* GameCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardView.swift; sourceTree = "<group>"; };
+		51F9D23F2ED74C9400E78041 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
+		51F9D2402ED74C9400E78041 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		51F9D2412ED74C9400E78041 /* PlayerProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileView.swift; sourceTree = "<group>"; };
+		51F9D2442ED74C9400E78041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		510807B22ED5F2B00011629C /* HyTracker */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = HyTracker;
-			sourceTree = "<group>";
-		};
 		517AA1552ED65B0F0003819F /* .github */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = .github;
@@ -44,7 +61,7 @@
 			children = (
 				517AA1552ED65B0F0003819F /* .github */,
 				517AA1452ED657150003819F /* README.md */,
-				510807B22ED5F2B00011629C /* HyTracker */,
+				51F9D2452ED74C9400E78041 /* HyTracker */,
 				510807B12ED5F2B00011629C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +72,80 @@
 				510807B02ED5F2B00011629C /* HyTracker.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		51F9D2342ED74C9400E78041 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				51F9D2332ED74C9400E78041 /* HyTrackerApp.swift */,
+				51F9D2442ED74C9400E78041 /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		51F9D2372ED74C9400E78041 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				51F9D2352ED74C9400E78041 /* GameType.swift */,
+				51F9D2362ED74C9400E78041 /* RecentPlayer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		51F9D23A2ED74C9400E78041 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				51F9D2382ED74C9400E78041 /* HypixelAPI.swift */,
+				51F9D2392ED74C9400E78041 /* MojangAPI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		51F9D23C2ED74C9400E78041 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				51F9D23B2ED74C9400E78041 /* PlayerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		51F9D23E2ED74C9400E78041 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				51F9D23D2ED74C9400E78041 /* GameCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		51F9D2422ED74C9400E78041 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				51F9D23F2ED74C9400E78041 /* GameDetailView.swift */,
+				51F9D2402ED74C9400E78041 /* HomeView.swift */,
+				51F9D2412ED74C9400E78041 /* PlayerProfileView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		51F9D2432ED74C9400E78041 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				51F9D23E2ED74C9400E78041 /* Components */,
+				51F9D2422ED74C9400E78041 /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		51F9D2452ED74C9400E78041 /* HyTracker */ = {
+			isa = PBXGroup;
+			children = (
+				51F9D2342ED74C9400E78041 /* App */,
+				51F9D2372ED74C9400E78041 /* Models */,
+				51F9D23A2ED74C9400E78041 /* Services */,
+				51F9D23C2ED74C9400E78041 /* ViewModels */,
+				51F9D2432ED74C9400E78041 /* Views */,
+			);
+			path = HyTracker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,7 +164,6 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				510807B22ED5F2B00011629C /* HyTracker */,
 				517AA1552ED65B0F0003819F /* .github */,
 			);
 			name = HyTracker;
@@ -123,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				517AA1462ED657150003819F /* README.md in Resources */,
+				51F9D2462ED74C9400E78041 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +224,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51F9D2472ED74C9400E78041 /* HyTrackerApp.swift in Sources */,
+				51F9D2482ED74C9400E78041 /* GameType.swift in Sources */,
+				51F9D2492ED74C9400E78041 /* RecentPlayer.swift in Sources */,
+				51F9D24A2ED74C9400E78041 /* HypixelAPI.swift in Sources */,
+				51F9D24B2ED74C9400E78041 /* MojangAPI.swift in Sources */,
+				51F9D24C2ED74C9400E78041 /* PlayerViewModel.swift in Sources */,
+				51F9D24D2ED74C9400E78041 /* GameCardView.swift in Sources */,
+				51F9D24E2ED74C9400E78041 /* GameDetailView.swift in Sources */,
+				51F9D24F2ED74C9400E78041 /* HomeView.swift in Sources */,
+				51F9D2502ED74C9400E78041 /* PlayerProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
