@@ -23,6 +23,11 @@ class HypixelAPI {
         let guild: Guild?
     }
     
+    struct SkyblockResponse: Decodable {
+        let success: Bool
+        let profiles: [SkyblockProfile]?
+    }
+    
     struct Guild: Decodable {
         let name: String
         let tag: String?
@@ -122,6 +127,84 @@ class HypixelAPI {
             case gamesPlayed = "games"
         }
     }
+    
+    struct SkyblockProfile: Decodable, Identifiable {
+        let profileId: String
+        let cuteName: String
+        let selected: Bool
+        let members: [String: SkyblockMember]?
+        let banking: BankingInfo?
+        
+        var id: String { profileId }
+        
+        enum CodingKeys: String, CodingKey {
+            case profileId = "profile_id"
+            case cuteName = "cute_name"
+            case selected, members, banking
+        }
+    }
+    
+    struct BankingInfo: Decodable {
+        let balance: Double?
+    }
+    
+    struct SkyblockMember: Decodable {
+        let currencies: Currencies?
+        let playerData: PlayerData?
+        let leveling: LevelingInfo?
+        let fairySoul: FairySoulInfo?
+        let profileData: MemberProfileData?
+        
+        enum CodingKeys: String, CodingKey {
+            case currencies, leveling
+            case playerData = "player_data"
+            case fairySoul = "fairy_soul"
+            case profileData = "profile"
+        }
+    }
+    
+    struct Currencies: Decodable {
+        let coinPurse: Double?
+        enum CodingKeys: String, CodingKey {
+            case coinPurse = "coin_purse"
+        }
+    }
+
+    struct LevelingInfo: Decodable {
+        let experience: Double?
+    }
+    
+    struct FairySoulInfo: Decodable {
+        let totalCollected: Int?
+        
+        enum CodingKeys: String, CodingKey {
+            case totalCollected = "total_collected"
+        }
+    }
+
+    struct PlayerData: Decodable {
+        let experience: [String: Double]?
+        
+        var combatXP: Double? { experience?["SKILL_COMBAT"] }
+        var miningXP: Double? { experience?["SKILL_MINING"] }
+        var farmingXP: Double? { experience?["SKILL_FARMING"] }
+        var foragingXP: Double? { experience?["SKILL_FORAGING"] }
+        var fishingXP: Double? { experience?["SKILL_FISHING"] }
+        var enchantingXP: Double? { experience?["SKILL_ENCHANTING"] }
+        var alchemyXP: Double? { experience?["SKILL_ALCHEMY"] }
+        var tamingXP: Double? { experience?["SKILL_TAMING"] }
+        var runecraftingXP: Double? { experience?["SKILL_RUNECRAFTING"] }
+        var socialXP: Double? { experience?["SKILL_SOCIAL"] }
+        var carpentryXP: Double? { experience?["SKILL_CARPENTRY"] }
+    }
+    
+    struct MemberProfileData: Decodable {
+        let firstJoin: Double?
+        
+        enum CodingKeys: String, CodingKey {
+            case firstJoin = "first_join"
+        }
+    }
      
     static let apiKey: String = "575ec970-cdf7-4ae6-a38d-7d76c6cd6209"
     
@@ -169,6 +252,23 @@ class HypixelAPI {
         
         let result = try JSONDecoder().decode(GuildResponse.self, from: data)
         return result.guild
+    }
+    
+    static func getSkyblockProfiles(uuid: String) async throws -> [SkyblockProfile]? {
+        
+        guard let url = URL(string: "https://api.hypixel.net/v2/skyblock/profiles?key=\(apiKey)&uuid=\(uuid)") else {
+            return nil
+        }
+        
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            return nil
+        }
+        
+        let result = try JSONDecoder().decode(SkyblockResponse.self, from: data)
+        
+        return result.profiles
     }
 }
 

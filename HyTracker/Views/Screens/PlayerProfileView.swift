@@ -11,8 +11,10 @@ import SwiftUI
 struct PlayerProfileView: View {
     
     @EnvironmentObject var viewModel: PlayerViewModel
+    
     @State private var selectedTab = 0
     @State private var selectedGame: GameType? = nil
+    @State private var selectedProfile: HypixelAPI.SkyblockProfile? = nil
     
     var themeColor: Color {
         return viewModel.hypixelPlayer?.rankColor ?? .blue
@@ -97,7 +99,7 @@ struct PlayerProfileView: View {
             Spacer()
         }
         .padding()
-        .background(Color.white)
+        .background(Color(.secondarySystemBackground))
         .cornerRadius(15)
         .shadow(color: .black.opacity(0.1), radius: 5)
         .padding(.horizontal)
@@ -127,15 +129,87 @@ struct PlayerProfileView: View {
     }
     
     var skyblockPlaceholder: some View {
-        VStack(spacing: 20) {
-            Image(systemName: "cube.box.fill")
-                .font(.system(size: 60))
-                .foregroundStyle(.gray.opacity(0.5))
-            Text("Skyblock Coming Soon")
-                .font(.title2)
-                .bold()
-                .foregroundStyle(.gray)
+        VStack(spacing: 15) {
+            
+            HStack{
+                Text("Profiles")
+                    .font(.headline)
+                    .foregroundStyle(.gray)
+                Spacer()
+            }
+            .padding(.horizontal)
+            
+            if viewModel.skyblockProfiles.isEmpty {
+                VStack(spacing: 10) {
+                    Image(systemName: "slash.circle")
+                        .font(.largeTitle)
+                        .foregroundStyle(.gray)
+                    
+                    Text("No Skyblock profiles found. Try again later.")
+                        .font(.subheadline)
+                        .foregroundStyle(.gray)
+                }
+                .padding(.top, 30)
+            } else {
+                ForEach(viewModel.skyblockProfiles) { profile in
+                    Button {
+                        selectedProfile = profile
+                    } label: {
+                        SkyblockProfileViewRow(profile: profile)
+                    }
+                }
+                .padding(.horizontal)
+            }
         }
-        .padding(.top, 50)
+        .padding(.top)
+        .fullScreenCover(item: $selectedProfile) { profile in
+            SkyblockDashboardView(profile: profile, playerUUID: viewModel.playerUUID)
+        }
+    }
+}
+
+struct SkyblockProfileViewRow: View {
+    let profile: HypixelAPI.SkyblockProfile
+    
+    var body: some View {
+        HStack(spacing: 15) {
+            
+            Image(systemName: "tree.fill")
+                .font(.title)
+                .foregroundStyle(profile.selected ? .indigo : .gray)
+                .frame(width: 50, height: 50)
+                .background(profile.selected ? .indigo.opacity(0.1) : .gray.opacity(0.1))
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+            
+            VStack(alignment: .leading) {
+                Text(profile.cuteName)
+                    .font(.headline)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.primary)
+                
+                Text("ID: ...\(profile.profileId.suffix(4))")
+                    .font(.caption)
+                    .foregroundStyle(.gray)
+                    .monospaced()
+            }
+            
+            Spacer()
+            
+            if profile.selected {
+                Text("ACTIF")
+                    .font(.caption2)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.white)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                    .background(Color.indigo)
+                    .clipShape(Capsule())
+                    .shadow(color: .indigo.opacity(0.3), radius: 3)
+            }
+        }
+        .padding()
+        .background(Color(.secondarySystemBackground))
+        .cornerRadius(15)
+        .shadow(color: .black.opacity(0.05), radius: 3, x: 0, y: 2)
     }
 }

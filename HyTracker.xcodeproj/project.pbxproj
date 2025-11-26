@@ -19,6 +19,10 @@
 		51F9D24E2ED74C9400E78041 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D23F2ED74C9400E78041 /* GameDetailView.swift */; };
 		51F9D24F2ED74C9400E78041 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D2402ED74C9400E78041 /* HomeView.swift */; };
 		51F9D2502ED74C9400E78041 /* PlayerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D2412ED74C9400E78041 /* PlayerProfileView.swift */; };
+		51F9D2582ED7723000E78041 /* SkyblockDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D2572ED7723000E78041 /* SkyblockDashboardView.swift */; };
+		51F9D25A2ED7788C00E78041 /* SkyblockStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D2592ED7788C00E78041 /* SkyblockStyle.swift */; };
+		51F9D25C2ED780D400E78041 /* SkyblockCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D25B2ED780D400E78041 /* SkyblockCalculator.swift */; };
+		51F9D2602ED7819700E78041 /* SkyblockComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D25F2ED7819700E78041 /* SkyblockComponents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		51F9D2402ED74C9400E78041 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		51F9D2412ED74C9400E78041 /* PlayerProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileView.swift; sourceTree = "<group>"; };
 		51F9D2442ED74C9400E78041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		51F9D2572ED7723000E78041 /* SkyblockDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyblockDashboardView.swift; sourceTree = "<group>"; };
+		51F9D2592ED7788C00E78041 /* SkyblockStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyblockStyle.swift; sourceTree = "<group>"; };
+		51F9D25B2ED780D400E78041 /* SkyblockCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyblockCalculator.swift; sourceTree = "<group>"; };
+		51F9D25F2ED7819700E78041 /* SkyblockComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyblockComponents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -97,6 +105,7 @@
 			children = (
 				51F9D2382ED74C9400E78041 /* HypixelAPI.swift */,
 				51F9D2392ED74C9400E78041 /* MojangAPI.swift */,
+				51F9D25B2ED780D400E78041 /* SkyblockCalculator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -113,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				51F9D23D2ED74C9400E78041 /* GameCardView.swift */,
+				51F9D2592ED7788C00E78041 /* SkyblockStyle.swift */,
+				51F9D25F2ED7819700E78041 /* SkyblockComponents.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -123,6 +134,7 @@
 				51F9D23F2ED74C9400E78041 /* GameDetailView.swift */,
 				51F9D2402ED74C9400E78041 /* HomeView.swift */,
 				51F9D2412ED74C9400E78041 /* PlayerProfileView.swift */,
+				51F9D2572ED7723000E78041 /* SkyblockDashboardView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -229,7 +241,11 @@
 				51F9D2492ED74C9400E78041 /* RecentPlayer.swift in Sources */,
 				51F9D24A2ED74C9400E78041 /* HypixelAPI.swift in Sources */,
 				51F9D24B2ED74C9400E78041 /* MojangAPI.swift in Sources */,
+				51F9D2602ED7819700E78041 /* SkyblockComponents.swift in Sources */,
+				51F9D25A2ED7788C00E78041 /* SkyblockStyle.swift in Sources */,
 				51F9D24C2ED74C9400E78041 /* PlayerViewModel.swift in Sources */,
+				51F9D25C2ED780D400E78041 /* SkyblockCalculator.swift in Sources */,
+				51F9D2582ED7723000E78041 /* SkyblockDashboardView.swift in Sources */,
 				51F9D24D2ED74C9400E78041 /* GameCardView.swift in Sources */,
 				51F9D24E2ED74C9400E78041 /* GameDetailView.swift in Sources */,
 				51F9D24F2ED74C9400E78041 /* HomeView.swift in Sources */,

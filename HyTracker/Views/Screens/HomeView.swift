@@ -60,7 +60,7 @@ struct HomeView: View {
                             }
                         }
                         .padding()
-                        .background(Color.white)
+                        .background(Color(.secondarySystemGroupedBackground))
                         .cornerRadius(15)
                         .shadow(radius: 5)
                         
@@ -145,9 +145,9 @@ struct HomeView: View {
                             .font(.caption2)
                             .padding(.horizontal, 10)
                             .padding(.vertical, 4)
-                            .background(Color.green.opacity(0.2))
+                            .background(Color.green.opacity(0.8))
                             .cornerRadius(20)
-                            .foregroundStyle(.green)
+                            .foregroundStyle(.white)
                     }
                     .frame(maxWidth: .infinity)
                     .padding(30)

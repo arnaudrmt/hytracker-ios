@@ -21,6 +21,7 @@ class PlayerViewModel: ObservableObject {
     @Published var guildTag: String? = nil
     
     @Published var hypixelPlayer: HypixelAPI.HypixelPlayer? = nil
+    @Published var skyblockProfiles: [HypixelAPI.SkyblockProfile] = []
     
     var hypixelName: String { return hypixelPlayer?.displayName ?? "" }
     var hypixelLevel: Double { return hypixelPlayer?.hypixelLevel ?? 0 }
@@ -89,6 +90,12 @@ class PlayerViewModel: ObservableObject {
                     } else {
                         self.guildName = nil
                     }
+                    
+                    if let profiles = try? await HypixelAPI.getSkyblockProfiles(uuid: uuid) {
+                        self.skyblockProfiles = profiles.sorted { ($0.selected) && !($1.selected) }
+                    } else {
+                        self.skyblockProfiles = []
+                    }
                 } else {
                     self.errorMessage = "Player never logged on Hypixel"
                 }
@@ -105,5 +112,6 @@ class PlayerViewModel: ObservableObject {
         self.errorMessage = nil
         self.guildName = nil
         self.guildTag = nil
+        self.skyblockProfiles = []
     }
 }
