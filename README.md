@@ -2,7 +2,7 @@
 
 ![HyTracker Banner](https://placehold.co/800x200/F1C40F/000000?text=HyTracker&font=montserrat)
 
-![Swift](https://img.shields.io/badge/Swift-5.9-orange?logo=swift)
+![Swift](https://img.shields.io/badge/Swift-6.1-orange?logo=swift)
 ![Platform](https://img.shields.io/badge/Platform-iOS_26+-lightgrey?logo=apple)
 ![Hypixel](https://img.shields.io/badge/API-Hypixel-red)
 ![License](https://img.shields.io/badge/License-MIT-blue)
@@ -41,9 +41,9 @@ HyTracker provides a fluid, native iOS interface.
 
 | Feature | Description |
 | :--- | :--- |
-| ![Search](.github/assets/search_showcase.gif) | **Smart Search & History**: Enter a username to fetch their UUID via Mojang. Recent searches are automatically saved locally using **SwiftData** for instant access later. |
-| ![Dashboard](.github/assets/visual_dashboard.png) | **Visual Dashboard**: Displays the player's 3D head (via Crafatar), their real-time **Hypixel Rank** (VIP, MVP++, etc.) with correct color codes, and their Network Level progress. |
-| ![Stats](.github/assets/game_statistics.png) | **Game Statistics**: A responsive grid layout showing deep stats for **Bedwars** and **SkyWars**. Includes calculated metrics like **K/D Ratio** and Win counts. |
+| ![Search](.github/assets/search_history_showcase.gif) | **Smart Search, History & Livre Player Count**: Enter a username to fetch their UUID via Mojang. Recent searches are automatically saved locally using **SwiftData** for instant access later. The current Hypixel's player count is also being displayed in real-time on the home page. |
+| ![Dashboard](.github/assets/dashboard_showcase.gif) | **Visual Dashboard**: Displays the player's 3D head (via Crafatar), their real-time **Hypixel Rank** (VIP, MVP++, etc.) with correct color codes, their Network Level progress and their guild. |
+| ![Stats](.github/assets/game_statistics_showcase.gif) | **Game Statistics**: A responsive grid layout showing deep stats for **Game Modes**. Includes calculated metrics like **K/D Ratio** and Win counts. |
 
 ---
 
