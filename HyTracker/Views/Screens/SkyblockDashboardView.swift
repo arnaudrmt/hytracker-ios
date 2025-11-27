@@ -16,6 +16,7 @@ struct SkyblockDashboardView: View {
     @Environment(\.dismiss) var dismiss
     
     @State private var isSkillsExpanded: Bool = false
+    @State private var showStatsSheet = false
     
     var memberStats: HypixelAPI.SkyblockMember? {
         let cleanUUID = playerUUID.lowercased().replacingOccurrences(of: "-", with: "")
@@ -38,20 +39,24 @@ struct SkyblockDashboardView: View {
             ScrollView {
                 VStack(spacing: 25) {
                     
-                    ProfileHeaderView(
-                        profileName: profile.cuteName,
-                        sbLevelXP: memberStats?.leveling?.experience ?? 0,
-                        fairySouls: memberStats?.fairySoul?.totalCollected ?? 0,
-                        purse: (memberStats?.currencies?.coinPurse ?? 0) + (profile.banking?.balance ?? 0),
-                        skillAvg: skillAverage,
-                        joinedDate: memberStats?.profileData?.firstJoin
-                    )
-                    .padding(.horizontal)
-                    .padding(.top)
+                        ProfileHeaderView(
+                            profileName: profile.cuteName,
+                            sbLevelXP: memberStats?.leveling?.experience ?? 0,
+                            fairySouls: memberStats?.fairySoul?.totalCollected ?? 0,
+                            purse: (memberStats?.currencies?.coinPurse ?? 0) + (profile.banking?.balance ?? 0),
+                            skillAvg: skillAverage,
+                            joinedDate: memberStats?.profileData?.firstJoin,
+                            onInfoTap: {
+                                showStatsSheet = true
+                            }
+                        )
+                        .padding(.horizontal)
+                        .padding(.top)
+                    
                     
                     VStack(spacing: 0) {
                         Button {
-                           isSkillsExpanded.toggle()
+                            isSkillsExpanded.toggle()
                         } label: {
                             HStack {
                                 Text("Skills")
@@ -127,6 +132,17 @@ struct SkyblockDashboardView: View {
                     Button("Fermer") { dismiss() }
                         .foregroundStyle(.blue)
                         .fontWeight(.bold)
+                }
+            }
+            .sheet(isPresented: $showStatsSheet) {
+                if let member = memberStats {
+                    let computedStats = SkyblockCalculator.calculateBaseStats(profile: member)
+                    
+                    PlayerStatsSheet(stats: computedStats)
+                        .presentationDetents([.medium, .large])
+                        .presentationDragIndicator(.visible)
+                } else {
+                    Text("Données indisponibles")
                 }
             }
         }

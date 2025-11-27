@@ -62,4 +62,107 @@ struct SkyblockCalculator {
         }
         return totalLevels / Double(validSkills.count)
     }
+    
+    struct CalculatedStats {
+        var health: Double = 100
+        var healthRegen: Double = 100
+        var defense: Double = 0
+        var vitality: Double = 100
+        var mending: Double = 100
+        
+        var strength: Double = 0
+        var speed: Double = 100
+        var critChance: Double = 30
+        var critDamage: Double = 50
+        var attackSpeed: Double = 0
+        var ferocity: Double = 0
+        
+        var intelligence: Double = 0
+        var abilityDamage: Double = 0
+        var magicFind: Double = 0
+        var petLuck: Double = 0
+        var fear: Double = 0
+        
+        var miningFortune: Double = 0
+        var miningSpeed: Double = 0
+        var gemstoneFortune: Double = 0
+        var farmingFortune: Double = 0
+        var foragingFortune: Double = 0
+        var fishingSpeed: Double = 0
+        var seaCreatureChance: Double = 20
+        
+        func fmt(_ value: Double) -> String {
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .decimal
+            formatter.maximumFractionDigits = 1
+            return formatter.string(from: NSNumber(value: value)) ?? "\(value)"
+        }
+    }
+}
+
+extension SkyblockCalculator {
+    
+    static func calculateBaseStats(profile: HypixelAPI.SkyblockMember) -> CalculatedStats {
+        var stats = CalculatedStats()
+        let data = profile.playerData
+        
+        if let xp = data?.farmingXP {
+            let lvl = calculateSkillLevel(xp: xp, type: .farming).level
+            stats.health += Double(lvl * 3)
+            stats.farmingFortune += Double(lvl * 4)
+        }
+        
+        if let xp = data?.miningXP {
+            let lvl = calculateSkillLevel(xp: xp, type: .mining).level
+            stats.defense += Double(lvl * 2)
+            stats.miningFortune += Double(lvl * 4)
+        }
+        
+        if let xp = data?.combatXP {
+            let lvl = calculateSkillLevel(xp: xp, type: .combat).level
+            stats.critChance += Double(lvl) * 0.5
+        }
+        
+        if let xp = data?.foragingXP {
+            let lvl = calculateSkillLevel(xp: xp, type: .foraging).level
+            stats.strength += Double(lvl * 2)
+            stats.foragingFortune += Double(lvl * 4)
+        }
+        
+        if let xp = data?.enchantingXP {
+            let lvl = calculateSkillLevel(xp: xp, type: .enchanting).level
+            stats.intelligence += Double(lvl * 2)
+            stats.abilityDamage += Double(lvl) * 0.5
+        }
+        
+        if let xp = data?.alchemyXP {
+            let lvl = calculateSkillLevel(xp: xp, type: .alchemy).level
+            stats.intelligence += Double(lvl * 2)
+        }
+        
+        if let xp = data?.tamingXP {
+            let lvl = calculateSkillLevel(xp: xp, type: .taming).level
+            stats.petLuck += Double(lvl * 1)
+        }
+        
+        if let xp = data?.fishingXP {
+            let lvl = calculateSkillLevel(xp: xp, type: .fishing).level
+            stats.health += Double(lvl * 3)
+        }
+        
+        if let xp = data?.carpentryXP {
+            let lvl = calculateSkillLevel(xp: xp, type: .carpentry).level
+            stats.health += Double(lvl)
+        }
+        
+        if let souls = profile.fairySoul?.totalCollected {
+            let packs = Double(souls) / 5.0
+            stats.health += packs * 3
+            stats.defense += packs * 1
+            stats.strength += packs * 1
+            stats.speed += (Double(souls) / 50.0)
+        }
+        
+        return stats
+    }
 }

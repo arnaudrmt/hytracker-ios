@@ -24,12 +24,12 @@ struct HomeView: View {
         NavigationStack {
             ZStack {
                 
-                LinearGradient(colors: [Color("HypixelGold"), Color("HypixelOrange")], startPoint: .topLeading, endPoint: .bottomTrailing)
+                LinearGradient(colors: [Color("hypixel_color_orange"), Color("hypixel_color_gold")], startPoint: .topLeading, endPoint: .bottomTrailing)
                     .ignoresSafeArea()
                 
                 VStack(spacing: 40) {
                     VStack {
-                        Image("HypixelLogo")
+                        Image("hypixel_logo")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 80, height: 80)

@@ -110,19 +110,19 @@ struct PlayerProfileView: View {
             
             
             Button { selectedGame = .bedwars } label: {
-                GameCardView(title: "Bedwars", imageName: "icon_bed", color: .red, mainStat: "\(viewModel.bedwarsWins) Wins", subStat: "\(String(format: "%.2f", viewModel.bedwarsKD)) K/D")
+                GameCardView(title: "Bedwars", imageName: "minecraft_block_bed", color: .red, mainStat: "\(viewModel.bedwarsWins) Wins", subStat: "\(String(format: "%.2f", viewModel.bedwarsKD)) K/D")
             }
             
             Button { selectedGame = .skywars } label: {
-                GameCardView(title: "SkyWars", imageName: "icon_eye", color: .blue, mainStat: "\(viewModel.skyWarsWins) Wins", subStat: "\(String(format: "%.2f", viewModel.skyWarsKD)) K/D")
+                GameCardView(title: "SkyWars", imageName: "minecraft_item_eye_of_ender", color: .blue, mainStat: "\(viewModel.skyWarsWins) Wins", subStat: "\(String(format: "%.2f", viewModel.skyWarsKD)) K/D")
             }
             
             Button { selectedGame = .duels } label: {
-                GameCardView(title: "Duels", imageName: "icon_fishing_rod", color: .orange, mainStat: "\(viewModel.duelsWins) Wins", subStat: "\(String(format: "%.2f", viewModel.duelsKD)) K/D")
+                GameCardView(title: "Duels", imageName: "minecraft_item_fishing_rod", color: .orange, mainStat: "\(viewModel.duelsWins) Wins", subStat: "\(String(format: "%.2f", viewModel.duelsKD)) K/D")
             }
             
             Button { selectedGame = .murderMystery } label: {
-                GameCardView(title: "Murder Mystery", imageName: "icon_bow", color: .purple, mainStat: "\(viewModel.mmWins) Wins", subStat: "\(viewModel.mmKils) Kills")
+                GameCardView(title: "Murder Mystery", imageName: "minecraft_item_bow", color: .purple, mainStat: "\(viewModel.mmWins) Wins", subStat: "\(viewModel.mmKils) Kills")
             }
         }
         .padding()
@@ -174,8 +174,9 @@ struct SkyblockProfileViewRow: View {
     var body: some View {
         HStack(spacing: 15) {
             
-            Image(systemName: "tree.fill")
-                .font(.title)
+            Image("skyblock_head_globe")
+                .resizable()
+                .scaledToFit()
                 .foregroundStyle(profile.selected ? .indigo : .gray)
                 .frame(width: 50, height: 50)
                 .background(profile.selected ? .indigo.opacity(0.1) : .gray.opacity(0.1))

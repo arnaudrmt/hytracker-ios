@@ -36,17 +36,17 @@ enum SkyblockModuleType {
     
     var iconName: String {
         switch self {
-        case .combat: return "icon_stone_sword"
-        case .mining: return "icon_stone_pickaxe"
-        case .farming: return "icon_golden_hoe"
-        case .foraging: return "icon_spruce_sapling"
-        case .fishing: return "icon_fishing_rod"
-        case .enchanting: return "icon_enchantment_table"
-        case .alchemy: return "icon_brewing_stand"
-        case .taming: return "icon_spawn_egg"
-        case .runecrafting: return "icon_magma_cream"
-        case .social: return "icon_emerald"
-        case .carpentry: return "icon_crafting_table"
+        case .combat: return "minecraft_item_stone_sword"
+        case .mining: return "minecraft_item_stone_pickaxe"
+        case .farming: return "minecraft_item_golden_hoe"
+        case .foraging: return "minecraft_block_spruce_sapling"
+        case .fishing: return "minecraft_item_fishing_rod"
+        case .enchanting: return "minecraft_block_enchanting_table"
+        case .alchemy: return "minecraft_block_brewing_stand"
+        case .taming: return "minecraft_item_golem_spawn_egg"
+        case .runecrafting: return "minecraft_item_magma_cream"
+        case .social: return "minecraft_item_emerald"
+        case .carpentry: return "minecraft_block_crafting_table"
         default: return "archivebox.fill"
         }
     }

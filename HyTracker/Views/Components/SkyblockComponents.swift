@@ -20,19 +20,22 @@ struct ProfileHeaderView: View {
     var sbProgress: Double { (sbLevelXP.truncatingRemainder(dividingBy: 100)) / 100 }
     var joinedDate: Double?
     
+    let onInfoTap: () -> Void
+    
     var formattedDate: String {
-            guard let timestamp = joinedDate else { return "N/A" }
-            let date = Date(timeIntervalSince1970: timestamp / 1000)
-            let formatter = DateFormatter()
-            formatter.dateStyle = .medium
-            return formatter.string(from: date)
-        }
+        guard let timestamp = joinedDate else { return "N/A" }
+        let date = Date(timeIntervalSince1970: timestamp / 1000)
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter.string(from: date)
+    }
     
     var body: some View {
         HStack(alignment: .center, spacing: 15) {
             
-            Image(systemName: "cube.box.fill")
-                .font(.system(size: 30))
+            Image("skyblock_head_globe")
+                .resizable()
+                .scaledToFit()
                 .foregroundStyle(.indigo)
                 .frame(width: 50, height: 50)
                 .background(Color.indigo.opacity(0.1))
@@ -48,17 +51,20 @@ struct ProfileHeaderView: View {
                     Spacer()
                     
                     HStack(spacing: 4) {
-                        Image(systemName: "bitcoinsign.circle.fill").foregroundStyle(.yellow)
+                        Image(systemName: "dollarsign.bank.building.fill").foregroundStyle(.yellow)
                         Text(purse.abbreviated()).bold().foregroundStyle(.primary)
                     }
                     .font(.caption)
                     .padding(6)
                     .background(Color.yellow.opacity(0.15))
                     .cornerRadius(8)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.yellow.opacity(0.5), lineWidth: 1)
-                    )
+                    
+                    Button(action: onInfoTap) {
+                        Image(systemName: "info.circle.fill")
+                            .font(.title3)
+                            .foregroundStyle(.blue)
+                    }
+                    .padding(.leading, 5)
                 }
                 
                 HStack(spacing: 5) {
@@ -216,5 +222,70 @@ struct ModuleButton: View {
         .background(Color(.secondarySystemGroupedBackground))
         .cornerRadius(16)
         .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 2)
+    }
+}
+
+struct StatBoxView: View {
+    let icon: SBIcon
+    let name: String
+    let value: String
+    let color: Color
+    
+    var body: some View {
+        VStack(spacing: 5) {
+            HStack(spacing: 5) {
+                icon.view(size: 14, color: color)
+                
+                Text(name)
+                    .font(.caption)
+                    .fontWeight(.bold)
+                    .foregroundColor(color)
+            }
+            .foregroundStyle(color)
+            
+            Text(value)
+                .font(.subheadline)
+                .fontWeight(.semibold)
+                .foregroundStyle(.primary)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 10)
+        .background(Color(.secondarySystemGroupedBackground))
+        .cornerRadius(12)
+        .overlay(
+            RoundedRectangle(cornerRadius: 12)
+                .stroke(color.opacity(0.2), lineWidth: 1)
+        )
+    }
+}
+
+struct StatSectionView<Content: View>: View {
+    let title: String
+    let icon: String
+    let color: Color
+    @ViewBuilder let content: Content
+    
+    let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 5) {
+                Image(systemName: icon)
+                Text(title.uppercased())
+            }
+            .font(.caption)
+            .fontWeight(.bold)
+            .foregroundStyle(color.opacity(0.8))
+            .padding(.leading, 5)
+            
+            LazyVGrid(columns: columns, spacing: 10) {
+                content
+            }
+        }
+        .padding(.bottom, 15)
     }
 }

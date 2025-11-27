@@ -206,7 +206,7 @@ class HypixelAPI {
         }
     }
      
-    static let apiKey: String = "575ec970-cdf7-4ae6-a38d-7d76c6cd6209"
+    static let apiKey: String = "YOUR-HYPIXEL-API-KEY"
     
     static func getPlayerCount() async throws -> Int {
         guard let url = URL(string: "https://api.hypixel.net/counts?key=\(apiKey)") else { return 0 }
