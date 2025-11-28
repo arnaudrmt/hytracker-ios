@@ -289,3 +289,75 @@ struct StatSectionView<Content: View>: View {
         .padding(.bottom, 15)
     }
 }
+
+struct EquipmentView: View {
+    
+    let armor: [SkyblockItem]
+    let equipment: [SkyblockItem]
+    
+    var body: some View {
+        VStack(spacing: 12) {
+            
+            HStack(spacing: 15) {
+                Spacer()
+                ForEach(0..<4) { index in
+                    if index < armor.count && !armor[index].isEmpty {
+                        let item = armor[index]
+                        ItemSlot(iconName: item.iconName, color: getRarityColor(item), isFilled: true)
+                    } else {
+                        ItemSlot(iconName: getEmptyArmorIcon(index: index), color: .gray, isFilled: false)
+                    }
+                }
+                Spacer()
+            }
+        }
+        .padding()
+        .background(Color(.secondarySystemGroupedBackground))
+        .cornerRadius(16)
+        .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 2)
+    }
+    
+    func getEmptyArmorIcon(index: Int) -> String {
+            let icons = ["empty_armor_helmet", "empty_armor_chestplate", "empty_armor_leggings", "empty_armor_boots"]
+            return icons[index]
+        }
+        
+        func getArmorIcon(index: Int) -> String {
+            return getEmptyArmorIcon(index: index)
+        }
+    
+    func getRarityColor(_ item: SkyblockItem) -> Color {
+           if item.rawName.contains("§6") { return .minecraftColorGold }        // Legendary
+           if item.rawName.contains("§d") { return .minecraftColorLightPurple } // Mythic
+           if item.rawName.contains("§5") { return .minecraftColorDarkPurple }  // Epic
+           if item.rawName.contains("§9") { return .minecraftColorBlue }        // Rare
+           if item.rawName.contains("§a") { return .minecraftColorGreen }       // Uncommon
+           return .minecraftColorGray // Common
+       }
+}
+
+struct ItemSlot: View {
+    let iconName: String
+    let color: Color
+    let isFilled: Bool
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 8)
+                .fill(Color("minecraft_color_dark_gray").opacity(0.3))
+                .frame(width: 50, height: 50)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(color, lineWidth: isFilled ? 2 : 1)
+                )
+            
+            Image(iconName)
+                .resizable()
+                .interpolation(.none)
+                .scaledToFit()
+                .frame(width: 32, height: 32)
+                .opacity(isFilled ? 1.0 : 0.4)
+            }
+    }
+}
+

@@ -116,7 +116,7 @@ struct GameDetailView: View {
                 }
                 
                 StatsSection(title: "Combat") {
-                    StatRow(title: "Kills", value: "\(viewModel.duelsKills)", icon: "swift", color: .orange) // Swift icon pour Duels ;)
+                    StatRow(title: "Kills", value: "\(viewModel.duelsKills)", icon: "swift", color: .orange)
                     StatRow(title: "Deaths", value: "\(viewModel.duelsDeaths)", icon: "figure.fall.circle.fill", color: .gray)
                     StatRow(title: "K/D Ratio", value: "\(viewModel.duelsKD)", icon: "divide.circle.fill", color: .yellow)
                 }

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51004C6A2ED9F8370026A651 /* SwiftNBT in Frameworks */ = {isa = PBXBuildFile; productRef = 51004C692ED9F8370026A651 /* SwiftNBT */; };
+		51004C6C2ED9FA490026A651 /* SkyblockItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51004C6B2ED9FA490026A651 /* SkyblockItem.swift */; };
+		51004C6E2ED9FAA20026A651 /* InventoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51004C6D2ED9FAA20026A651 /* InventoryService.swift */; };
+		51004C702EDA354F0026A651 /* MinecraftTextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51004C6F2EDA354F0026A651 /* MinecraftTextParser.swift */; };
+		51004C742EDA45770026A651 /* PlayerSkillsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51004C732EDA45770026A651 /* PlayerSkillsSheet.swift */; };
+		51004C782EDA49060026A651 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51004C772EDA49060026A651 /* LaunchScreen.storyboard */; };
 		517AA1462ED657150003819F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 517AA1452ED657150003819F /* README.md */; };
 		51BB762C2ED8586100016CE2 /* PlayerStatsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB762B2ED8586100016CE2 /* PlayerStatsSheet.swift */; };
 		51BB762E2ED85D0600016CE2 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51BB762D2ED85D0600016CE2 /* icomoon.ttf */; };
@@ -29,6 +35,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51004C6B2ED9FA490026A651 /* SkyblockItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyblockItem.swift; sourceTree = "<group>"; };
+		51004C6D2ED9FAA20026A651 /* InventoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryService.swift; sourceTree = "<group>"; };
+		51004C6F2EDA354F0026A651 /* MinecraftTextParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinecraftTextParser.swift; sourceTree = "<group>"; };
+		51004C732EDA45770026A651 /* PlayerSkillsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSkillsSheet.swift; sourceTree = "<group>"; };
+		51004C772EDA49060026A651 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		510807B02ED5F2B00011629C /* HyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		517AA1452ED657150003819F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		51BB762B2ED8586100016CE2 /* PlayerStatsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsSheet.swift; sourceTree = "<group>"; };
@@ -65,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51004C6A2ED9F8370026A651 /* SwiftNBT in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +89,7 @@
 				517AA1552ED65B0F0003819F /* .github */,
 				517AA1452ED657150003819F /* README.md */,
 				51F9D2452ED74C9400E78041 /* HyTracker */,
+				51F0C4702ED9C7B200CA87E3 /* Frameworks */,
 				510807B12ED5F2B00011629C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,12 +102,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		51F0C4702ED9C7B200CA87E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		51F9D2342ED74C9400E78041 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				51F9D2332ED74C9400E78041 /* HyTrackerApp.swift */,
 				51F9D2442ED74C9400E78041 /* Assets.xcassets */,
 				51BB762D2ED85D0600016CE2 /* icomoon.ttf */,
+				51004C772EDA49060026A651 /* LaunchScreen.storyboard */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -105,6 +126,7 @@
 				51F9D2352ED74C9400E78041 /* GameType.swift */,
 				51F9D2362ED74C9400E78041 /* RecentPlayer.swift */,
 				51BB76302ED85E4000016CE2 /* SkyblockIcons.swift */,
+				51004C6B2ED9FA490026A651 /* SkyblockItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -115,6 +137,8 @@
 				51F9D2382ED74C9400E78041 /* HypixelAPI.swift */,
 				51F9D2392ED74C9400E78041 /* MojangAPI.swift */,
 				51F9D25B2ED780D400E78041 /* SkyblockCalculator.swift */,
+				51004C6D2ED9FAA20026A651 /* InventoryService.swift */,
+				51004C6F2EDA354F0026A651 /* MinecraftTextParser.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -134,6 +158,7 @@
 				51F9D2592ED7788C00E78041 /* SkyblockStyle.swift */,
 				51F9D25F2ED7819700E78041 /* SkyblockComponents.swift */,
 				51BB762B2ED8586100016CE2 /* PlayerStatsSheet.swift */,
+				51004C732EDA45770026A651 /* PlayerSkillsSheet.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -191,6 +216,7 @@
 			);
 			name = HyTracker;
 			packageProductDependencies = (
+				51004C692ED9F8370026A651 /* SwiftNBT */,
 			);
 			productName = HyTracker;
 			productReference = 510807B02ED5F2B00011629C /* HyTracker.app */;
@@ -220,6 +246,9 @@
 			);
 			mainGroup = 510807A72ED5F2B00011629C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				51004C682ED9F8370026A651 /* XCRemoteSwiftPackageReference "SwiftNBT" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 510807B12ED5F2B00011629C /* Products */;
 			projectDirPath = "";
@@ -236,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				517AA1462ED657150003819F /* README.md in Resources */,
+				51004C782EDA49060026A651 /* LaunchScreen.storyboard in Resources */,
 				51BB762E2ED85D0600016CE2 /* icomoon.ttf in Resources */,
 				51F9D2462ED74C9400E78041 /* Assets.xcassets in Resources */,
 			);
@@ -253,16 +283,20 @@
 				51F9D2492ED74C9400E78041 /* RecentPlayer.swift in Sources */,
 				51F9D24A2ED74C9400E78041 /* HypixelAPI.swift in Sources */,
 				51F9D24B2ED74C9400E78041 /* MojangAPI.swift in Sources */,
+				51004C702EDA354F0026A651 /* MinecraftTextParser.swift in Sources */,
 				51F9D2602ED7819700E78041 /* SkyblockComponents.swift in Sources */,
 				51BB762C2ED8586100016CE2 /* PlayerStatsSheet.swift in Sources */,
 				51F9D25A2ED7788C00E78041 /* SkyblockStyle.swift in Sources */,
 				51F9D24C2ED74C9400E78041 /* PlayerViewModel.swift in Sources */,
 				51F9D25C2ED780D400E78041 /* SkyblockCalculator.swift in Sources */,
+				51004C6C2ED9FA490026A651 /* SkyblockItem.swift in Sources */,
 				51F9D2582ED7723000E78041 /* SkyblockDashboardView.swift in Sources */,
 				51F9D24D2ED74C9400E78041 /* GameCardView.swift in Sources */,
 				51BB76312ED85E4000016CE2 /* SkyblockIcons.swift in Sources */,
+				51004C6E2ED9FAA20026A651 /* InventoryService.swift in Sources */,
 				51F9D24E2ED74C9400E78041 /* GameDetailView.swift in Sources */,
 				51F9D24F2ED74C9400E78041 /* HomeView.swift in Sources */,
+				51004C742EDA45770026A651 /* PlayerSkillsSheet.swift in Sources */,
 				51F9D2502ED74C9400E78041 /* PlayerProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,14 +428,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 38FSX7K62C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HyTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -426,14 +463,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 38FSX7K62C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HyTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,6 +515,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		51004C682ED9F8370026A651 /* XCRemoteSwiftPackageReference "SwiftNBT" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/arnaudrmt/SwiftNBT";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		51004C692ED9F8370026A651 /* SwiftNBT */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51004C682ED9F8370026A651 /* XCRemoteSwiftPackageReference "SwiftNBT" */;
+			productName = SwiftNBT;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 510807A82ED5F2B00011629C /* Project object */;
 }

@@ -24,19 +24,10 @@ enum GameType: String, Identifiable {
     
     var icon: String {
         switch self {
-        case .bedwars: return "icon_bed"
-        case .skywars: return "icon_eye"
-        case .duels: return "icon_fishing_rod"
-        case .murderMystery: return "icon_bow"
-        }
-    }
-    
-    var assetName: String {
-        switch self {
-        case .bedwars: return "icon_bed"
-        case .skywars: return "icon_eye"
-        case .duels: return "icon_fishing_rod"
-        case .murderMystery: return "icon_bow"
+        case .bedwars: return "minecraft_block_bed"
+        case .skywars: return "minecraft_item_eye_of_ender"
+        case .duels: return "minecraft_item_fishing_rod"
+        case .murderMystery: return "minecraft_item_bow"
         }
     }
     

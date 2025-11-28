@@ -13,10 +13,12 @@ struct SkyblockDashboardView: View {
     let profile: HypixelAPI.SkyblockProfile
     let playerUUID: String
     
+    @EnvironmentObject var viewModel: PlayerViewModel
+    
     @Environment(\.dismiss) var dismiss
     
-    @State private var isSkillsExpanded: Bool = false
     @State private var showStatsSheet = false
+    @State private var showSkillsSheet = false
     
     var memberStats: HypixelAPI.SkyblockMember? {
         let cleanUUID = playerUUID.lowercased().replacingOccurrences(of: "-", with: "")
@@ -53,51 +55,47 @@ struct SkyblockDashboardView: View {
                         .padding(.horizontal)
                         .padding(.top)
                     
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Armor & Equipment")
+                            .font(.caption)
+                            .bold()
+                            .foregroundStyle(.secondary)
+                            .padding(.leading, 20)
+                        
+                        EquipmentView(armor: viewModel.armor, equipment: viewModel.equipment)
+                            .padding(.horizontal)
+                    }
+                    
                     
                     VStack(spacing: 0) {
                         Button {
-                            isSkillsExpanded.toggle()
+                            showSkillsSheet = true
                         } label: {
                             HStack {
-                                Text("Skills")
-                                    .font(.headline)
-                                    .foregroundStyle(.primary)
+                                VStack() {
+                                    Text("SKills")
+                                        .foregroundStyle(.blue)
+                                }
+                                .padding(.leading, 5)
                                 Spacer()
                                 Image(systemName: "chevron.right")
                                     .foregroundStyle(.gray)
-                                    .rotationEffect(.degrees(isSkillsExpanded ? 90 : 0))
                             }
                             .padding()
                             .background(Color(.secondarySystemGroupedBackground))
-                        }
-                        
-                        if isSkillsExpanded {
-                            VStack(spacing: 12) {
-                                Divider()
-                                
-                                Group {
-                                    SkillRowView(type: .combat, xp: playerData?.combatXP ?? 0)
-                                    SkillRowView(type: .mining, xp: playerData?.miningXP ?? 0)
-                                    SkillRowView(type: .farming, xp: playerData?.farmingXP ?? 0)
-                                    SkillRowView(type: .foraging, xp: playerData?.foragingXP ?? 0)
-                                    SkillRowView(type: .fishing, xp: playerData?.fishingXP ?? 0)
-                                    SkillRowView(type: .enchanting, xp: playerData?.enchantingXP ?? 0)
-                                    SkillRowView(type: .alchemy, xp: playerData?.alchemyXP ?? 0)
-                                    SkillRowView(type: .taming, xp: playerData?.tamingXP ?? 0)
-                                    SkillRowView(type: .runecrafting, xp: playerData?.runecraftingXP ?? 0)
-                                    SkillRowView(type: .social, xp: playerData?.socialXP ?? 0)
-                                    SkillRowView(type: .carpentry, xp: playerData?.carpentryXP ?? 0)
-                                }
-                            }
-                            .padding()
-                            .background(Color(.secondarySystemGroupedBackground))
-                            .transition(.opacity.combined(with: .move(edge: .top)))
                         }
                     }
                     .clipShape(RoundedRectangle(cornerRadius: 16))
                     .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 2)
                     .padding(.horizontal)
-                    .animation(.easeInOut(duration: 0.3), value: isSkillsExpanded)
+                    .onAppear {
+                        if let member = memberStats {
+                            viewModel.loadInventoryData(
+                                armorBase64: member.inventory?.armor?.data,
+                                equipmentBase64: member.inventory?.equipment?.data
+                            )
+                        }
+                    }
                     
                     VStack(alignment: .leading, spacing: 10) {
                         Text("Modules")
@@ -142,7 +140,14 @@ struct SkyblockDashboardView: View {
                         .presentationDetents([.medium, .large])
                         .presentationDragIndicator(.visible)
                 } else {
-                    Text("Données indisponibles")
+                    Text("Data unavailable")
+                }
+            }
+            .sheet(isPresented: $showSkillsSheet) {
+                if let data = playerData {
+                    PlayerSkillsSheet(playerData: data)
+                } else {
+                    Text("Data unavailable")
                 }
             }
         }

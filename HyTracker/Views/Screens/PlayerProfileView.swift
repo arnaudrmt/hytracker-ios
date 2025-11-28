@@ -197,7 +197,7 @@ struct SkyblockProfileViewRow: View {
             Spacer()
             
             if profile.selected {
-                Text("ACTIF")
+                Text("LAST PLAYED")
                     .font(.caption2)
                     .fontWeight(.bold)
                     .foregroundStyle(.white)

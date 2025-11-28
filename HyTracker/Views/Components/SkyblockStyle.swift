@@ -10,7 +10,7 @@ import SwiftUI
 
 enum SkyblockModuleType {
     case combat, mining, farming, foraging, fishing, enchanting, alchemy, taming
-    case runecrafting, social, carpentry // <--- NOUVEAUX
+    case runecrafting, social, carpentry
     case catacombs, slayer, banking, inventory, misc
 
     var title: String {

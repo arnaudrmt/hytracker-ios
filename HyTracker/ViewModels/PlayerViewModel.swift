@@ -23,6 +23,9 @@ class PlayerViewModel: ObservableObject {
     @Published var hypixelPlayer: HypixelAPI.HypixelPlayer? = nil
     @Published var skyblockProfiles: [HypixelAPI.SkyblockProfile] = []
     
+    @Published var armor: [SkyblockItem] = []
+    @Published var equipment: [SkyblockItem] = []
+    
     var hypixelName: String { return hypixelPlayer?.displayName ?? "" }
     var hypixelLevel: Double { return hypixelPlayer?.hypixelLevel ?? 0 }
     
@@ -102,6 +105,21 @@ class PlayerViewModel: ObservableObject {
             } catch {
                 self.errorMessage = "Hypixel Error: \(error.localizedDescription)"
             }
+        }
+    }
+
+    func loadInventoryData(armorBase64: String?, equipmentBase64: String?) {
+        
+        if let armorString = armorBase64 {
+            self.armor = InventoryService.decode(base64: armorString).reversed()
+        } else {
+            self.armor = []
+        }
+        
+        if let equipString = equipmentBase64 {
+            self.equipment = InventoryService.decode(base64: equipString)
+        } else {
+            self.equipment = []
         }
     }
     

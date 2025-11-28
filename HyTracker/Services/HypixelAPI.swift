@@ -154,9 +154,10 @@ class HypixelAPI {
         let leveling: LevelingInfo?
         let fairySoul: FairySoulInfo?
         let profileData: MemberProfileData?
+        let inventory: InventoryData?
         
         enum CodingKeys: String, CodingKey {
-            case currencies, leveling
+            case currencies, leveling, inventory
             case playerData = "player_data"
             case fairySoul = "fairy_soul"
             case profileData = "profile"
@@ -205,8 +206,25 @@ class HypixelAPI {
             case firstJoin = "first_join"
         }
     }
-     
-    static let apiKey: String = "YOUR-HYPIXEL-API-KEY"
+    
+    struct InventoryData: Decodable {
+        let armor: InvContents?
+        let equipment: InvContents?
+        let wardrobe: InvContents?
+        
+        enum CodingKeys: String, CodingKey {
+            case armor = "inv_armor"
+            case equipment = "equipment_contents"
+            case wardrobe = "wardrobe_contents"
+        }
+    }
+    
+    struct InvContents: Decodable {
+        let type: Int?
+        let data: String?
+    }
+    
+    static let apiKey: String = "0dbc9d3b-0a42-4ed4-b915-a1081cd2b4c6"
     
     static func getPlayerCount() async throws -> Int {
         guard let url = URL(string: "https://api.hypixel.net/counts?key=\(apiKey)") else { return 0 }

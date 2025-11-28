@@ -1,0 +1,15 @@
+{
+  "originHash" : "062a8f8051ec6587137867f588f46ec498a251be88ccd277e70b331dc8c9e4a5",
+  "pins" : [
+    {
+      "identity" : "swiftnbt",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/arnaudrmt/SwiftNBT",
+      "state" : {
+        "revision" : "1e27e608d6e9edc74a4d4536ce5541141858350f",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
