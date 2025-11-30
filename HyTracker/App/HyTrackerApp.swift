@@ -16,6 +16,9 @@ struct HyTrackerApp: App {
     var body: some Scene {
         WindowGroup {
             HomeView().environmentObject(viewModel)
+                .task {
+                    await SkyblockResourceManager.shared.loadRessources()
+                }
         }
         .modelContainer(for: RecentPlayer.self)
     }

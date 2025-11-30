@@ -12,11 +12,28 @@
 		51004C6E2ED9FAA20026A651 /* InventoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51004C6D2ED9FAA20026A651 /* InventoryService.swift */; };
 		51004C702EDA354F0026A651 /* MinecraftTextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51004C6F2EDA354F0026A651 /* MinecraftTextParser.swift */; };
 		51004C742EDA45770026A651 /* PlayerSkillsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51004C732EDA45770026A651 /* PlayerSkillsSheet.swift */; };
-		51004C782EDA49060026A651 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51004C772EDA49060026A651 /* LaunchScreen.storyboard */; };
+		5108AF2C2EDC4DEE00640FFE /* MinionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5108AF2B2EDC4DEE00640FFE /* MinionData.swift */; };
+		5108AF2E2EDC53A400640FFE /* PlayerPetsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5108AF2D2EDC53A400640FFE /* PlayerPetsSheet.swift */; };
+		5108AF322EDC751D00640FFE /* PetLevelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5108AF312EDC751D00640FFE /* PetLevelData.swift */; };
+		5108AF342EDCB44200640FFE /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5108AF332EDCB44200640FFE /* Secrets.xcconfig */; };
+		5108AF362EDCB59600640FFE /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5108AF352EDCB59600640FFE /* Env.swift */; };
+		515B32BC2EDB6B5B0043E124 /* ItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515B32BB2EDB6B5B0043E124 /* ItemImageView.swift */; };
+		515B32BF2EDB6C620043E124 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 515B32BE2EDB6C620043E124 /* SDWebImageSwiftUI */; };
+		515B32C12EDB8FC70043E124 /* PlayerMinionsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515B32C02EDB8FC70043E124 /* PlayerMinionsSheet.swift */; };
 		517AA1462ED657150003819F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 517AA1452ED657150003819F /* README.md */; };
 		51BB762C2ED8586100016CE2 /* PlayerStatsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB762B2ED8586100016CE2 /* PlayerStatsSheet.swift */; };
 		51BB762E2ED85D0600016CE2 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51BB762D2ED85D0600016CE2 /* icomoon.ttf */; };
 		51BB76312ED85E4000016CE2 /* SkyblockIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB76302ED85E4000016CE2 /* SkyblockIcons.swift */; };
+		51CEFB062EDAFD4D00019A2F /* Double+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEFB052EDAFD4D00019A2F /* Double+Formatting.swift */; };
+		51CEFB132EDAFDC700019A2F /* HypixelPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEFB122EDAFDC700019A2F /* HypixelPlayer.swift */; };
+		51CEFB152EDAFDD200019A2F /* GameStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEFB142EDAFDD200019A2F /* GameStats.swift */; };
+		51CEFB1A2EDAFE3800019A2F /* SkyblockMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEFB192EDAFE3800019A2F /* SkyblockMember.swift */; };
+		51CEFB1C2EDAFE3F00019A2F /* SkyblockProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEFB1B2EDAFE3F00019A2F /* SkyblockProfile.swift */; };
+		51CEFB1F2EDB00BA00019A2F /* PlayerViewModel+Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEFB1E2EDB00BA00019A2F /* PlayerViewModel+Games.swift */; };
+		51CEFB212EDB016300019A2F /* PlayerViewModel+Skyblock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CEFB202EDB016300019A2F /* PlayerViewModel+Skyblock.swift */; };
+		51F6C8842EDB0CA6009690FD /* PlayerCollectionsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F6C8832EDB0CA6009690FD /* PlayerCollectionsSheet.swift */; };
+		51F6C8882EDB4F0E009690FD /* RessourceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F6C8872EDB4F0E009690FD /* RessourceModels.swift */; };
+		51F6C88A2EDB519D009690FD /* SkyblockResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F6C8892EDB519D009690FD /* SkyblockResourceManager.swift */; };
 		51F9D2462ED74C9400E78041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F9D2442ED74C9400E78041 /* Assets.xcassets */; };
 		51F9D2472ED74C9400E78041 /* HyTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D2332ED74C9400E78041 /* HyTrackerApp.swift */; };
 		51F9D2482ED74C9400E78041 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9D2352ED74C9400E78041 /* GameType.swift */; };
@@ -39,13 +56,29 @@
 		51004C6D2ED9FAA20026A651 /* InventoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryService.swift; sourceTree = "<group>"; };
 		51004C6F2EDA354F0026A651 /* MinecraftTextParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinecraftTextParser.swift; sourceTree = "<group>"; };
 		51004C732EDA45770026A651 /* PlayerSkillsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSkillsSheet.swift; sourceTree = "<group>"; };
-		51004C772EDA49060026A651 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		510807B02ED5F2B00011629C /* HyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5108AF2B2EDC4DEE00640FFE /* MinionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinionData.swift; sourceTree = "<group>"; };
+		5108AF2D2EDC53A400640FFE /* PlayerPetsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPetsSheet.swift; sourceTree = "<group>"; };
+		5108AF312EDC751D00640FFE /* PetLevelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetLevelData.swift; sourceTree = "<group>"; };
+		5108AF332EDCB44200640FFE /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		5108AF352EDCB59600640FFE /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
+		515B32BB2EDB6B5B0043E124 /* ItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageView.swift; sourceTree = "<group>"; };
+		515B32C02EDB8FC70043E124 /* PlayerMinionsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMinionsSheet.swift; sourceTree = "<group>"; };
 		517AA1452ED657150003819F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		51BB762B2ED8586100016CE2 /* PlayerStatsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsSheet.swift; sourceTree = "<group>"; };
 		51BB762D2ED85D0600016CE2 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
 		51BB762F2ED85DC200016CE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51BB76302ED85E4000016CE2 /* SkyblockIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyblockIcons.swift; sourceTree = "<group>"; };
+		51CEFB052EDAFD4D00019A2F /* Double+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Formatting.swift"; sourceTree = "<group>"; };
+		51CEFB122EDAFDC700019A2F /* HypixelPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypixelPlayer.swift; sourceTree = "<group>"; };
+		51CEFB142EDAFDD200019A2F /* GameStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStats.swift; sourceTree = "<group>"; };
+		51CEFB192EDAFE3800019A2F /* SkyblockMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyblockMember.swift; sourceTree = "<group>"; };
+		51CEFB1B2EDAFE3F00019A2F /* SkyblockProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyblockProfile.swift; sourceTree = "<group>"; };
+		51CEFB1E2EDB00BA00019A2F /* PlayerViewModel+Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerViewModel+Games.swift"; sourceTree = "<group>"; };
+		51CEFB202EDB016300019A2F /* PlayerViewModel+Skyblock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerViewModel+Skyblock.swift"; sourceTree = "<group>"; };
+		51F6C8832EDB0CA6009690FD /* PlayerCollectionsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCollectionsSheet.swift; sourceTree = "<group>"; };
+		51F6C8872EDB4F0E009690FD /* RessourceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RessourceModels.swift; sourceTree = "<group>"; };
+		51F6C8892EDB519D009690FD /* SkyblockResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyblockResourceManager.swift; sourceTree = "<group>"; };
 		51F9D2332ED74C9400E78041 /* HyTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyTrackerApp.swift; sourceTree = "<group>"; };
 		51F9D2352ED74C9400E78041 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
 		51F9D2362ED74C9400E78041 /* RecentPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPlayer.swift; sourceTree = "<group>"; };
@@ -76,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				515B32BF2EDB6C620043E124 /* SDWebImageSwiftUI in Frameworks */,
 				51004C6A2ED9F8370026A651 /* SwiftNBT in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +120,7 @@
 		510807A72ED5F2B00011629C = {
 			isa = PBXGroup;
 			children = (
+				5108AF332EDCB44200640FFE /* Secrets.xcconfig */,
 				517AA1552ED65B0F0003819F /* .github */,
 				517AA1452ED657150003819F /* README.md */,
 				51F9D2452ED74C9400E78041 /* HyTracker */,
@@ -102,6 +137,143 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		511AE93A2EDA4B26003D3B31 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				51BB762D2ED85D0600016CE2 /* icomoon.ttf */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		51CEFB012EDAFC1900019A2F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				51CEFB042EDAFD3C00019A2F /* Extensions */,
+				51CEFB032EDAFD2700019A2F /* Utilities */,
+				51CEFB022EDAFD1800019A2F /* Networking */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		51CEFB022EDAFD1800019A2F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				51F9D2382ED74C9400E78041 /* HypixelAPI.swift */,
+				51F9D2392ED74C9400E78041 /* MojangAPI.swift */,
+				51F6C8892EDB519D009690FD /* SkyblockResourceManager.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		51CEFB032EDAFD2700019A2F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				51004C6D2ED9FAA20026A651 /* InventoryService.swift */,
+				51004C6F2EDA354F0026A651 /* MinecraftTextParser.swift */,
+				5108AF352EDCB59600640FFE /* Env.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		51CEFB042EDAFD3C00019A2F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				51CEFB052EDAFD4D00019A2F /* Double+Formatting.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		51CEFB092EDAFD5B00019A2F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				51CEFB162EDAFDE700019A2F /* Skyblock */,
+				51CEFB0D2EDAFD8800019A2F /* GeneralProfile */,
+				51CEFB0C2EDAFD6A00019A2F /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		51CEFB0C2EDAFD6A00019A2F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				51F9D2402ED74C9400E78041 /* HomeView.swift */,
+				51F9D2362ED74C9400E78041 /* RecentPlayer.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		51CEFB0D2EDAFD8800019A2F /* GeneralProfile */ = {
+			isa = PBXGroup;
+			children = (
+				51CEFB112EDAFDB200019A2F /* Models */,
+				51CEFB0E2EDAFD9000019A2F /* Views */,
+			);
+			path = GeneralProfile;
+			sourceTree = "<group>";
+		};
+		51CEFB0E2EDAFD9000019A2F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				51F9D2412ED74C9400E78041 /* PlayerProfileView.swift */,
+				51F9D23F2ED74C9400E78041 /* GameDetailView.swift */,
+				51F9D23D2ED74C9400E78041 /* GameCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		51CEFB112EDAFDB200019A2F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				51CEFB122EDAFDC700019A2F /* HypixelPlayer.swift */,
+				51CEFB142EDAFDD200019A2F /* GameStats.swift */,
+				51F9D2352ED74C9400E78041 /* GameType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		51CEFB162EDAFDE700019A2F /* Skyblock */ = {
+			isa = PBXGroup;
+			children = (
+				51CEFB1D2EDAFE4700019A2F /* Logic */,
+				51CEFB182EDAFDFE00019A2F /* Models */,
+				51CEFB172EDAFDEC00019A2F /* Views */,
+			);
+			path = Skyblock;
+			sourceTree = "<group>";
+		};
+		51CEFB172EDAFDEC00019A2F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				51F6C8802EDB0375009690FD /* Components */,
+				51F9D2572ED7723000E78041 /* SkyblockDashboardView.swift */,
+				51F9D25F2ED7819700E78041 /* SkyblockComponents.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		51CEFB182EDAFDFE00019A2F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				51004C6B2ED9FA490026A651 /* SkyblockItem.swift */,
+				51CEFB192EDAFE3800019A2F /* SkyblockMember.swift */,
+				51CEFB1B2EDAFE3F00019A2F /* SkyblockProfile.swift */,
+				51F6C8872EDB4F0E009690FD /* RessourceModels.swift */,
+				5108AF2B2EDC4DEE00640FFE /* MinionData.swift */,
+				5108AF312EDC751D00640FFE /* PetLevelData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		51CEFB1D2EDAFE4700019A2F /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				51F9D25B2ED780D400E78041 /* SkyblockCalculator.swift */,
+				51F9D2592ED7788C00E78041 /* SkyblockStyle.swift */,
+				51BB76302ED85E4000016CE2 /* SkyblockIcons.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
 		51F0C4702ED9C7B200CA87E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,89 +281,47 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		51F6C8802EDB0375009690FD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				51BB762B2ED8586100016CE2 /* PlayerStatsSheet.swift */,
+				51004C732EDA45770026A651 /* PlayerSkillsSheet.swift */,
+				51F6C8832EDB0CA6009690FD /* PlayerCollectionsSheet.swift */,
+				515B32BB2EDB6B5B0043E124 /* ItemImageView.swift */,
+				515B32C02EDB8FC70043E124 /* PlayerMinionsSheet.swift */,
+				5108AF2D2EDC53A400640FFE /* PlayerPetsSheet.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		51F9D2342ED74C9400E78041 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				51F9D2332ED74C9400E78041 /* HyTrackerApp.swift */,
 				51F9D2442ED74C9400E78041 /* Assets.xcassets */,
-				51BB762D2ED85D0600016CE2 /* icomoon.ttf */,
-				51004C772EDA49060026A651 /* LaunchScreen.storyboard */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		51F9D2372ED74C9400E78041 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				51F9D2352ED74C9400E78041 /* GameType.swift */,
-				51F9D2362ED74C9400E78041 /* RecentPlayer.swift */,
-				51BB76302ED85E4000016CE2 /* SkyblockIcons.swift */,
-				51004C6B2ED9FA490026A651 /* SkyblockItem.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		51F9D23A2ED74C9400E78041 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				51F9D2382ED74C9400E78041 /* HypixelAPI.swift */,
-				51F9D2392ED74C9400E78041 /* MojangAPI.swift */,
-				51F9D25B2ED780D400E78041 /* SkyblockCalculator.swift */,
-				51004C6D2ED9FAA20026A651 /* InventoryService.swift */,
-				51004C6F2EDA354F0026A651 /* MinecraftTextParser.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		51F9D23C2ED74C9400E78041 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				51F9D23B2ED74C9400E78041 /* PlayerViewModel.swift */,
+				51CEFB1E2EDB00BA00019A2F /* PlayerViewModel+Games.swift */,
+				51CEFB202EDB016300019A2F /* PlayerViewModel+Skyblock.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		51F9D23E2ED74C9400E78041 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				51F9D23D2ED74C9400E78041 /* GameCardView.swift */,
-				51F9D2592ED7788C00E78041 /* SkyblockStyle.swift */,
-				51F9D25F2ED7819700E78041 /* SkyblockComponents.swift */,
-				51BB762B2ED8586100016CE2 /* PlayerStatsSheet.swift */,
-				51004C732EDA45770026A651 /* PlayerSkillsSheet.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		51F9D2422ED74C9400E78041 /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				51F9D23F2ED74C9400E78041 /* GameDetailView.swift */,
-				51F9D2402ED74C9400E78041 /* HomeView.swift */,
-				51F9D2412ED74C9400E78041 /* PlayerProfileView.swift */,
-				51F9D2572ED7723000E78041 /* SkyblockDashboardView.swift */,
-			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
-		51F9D2432ED74C9400E78041 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				51F9D23E2ED74C9400E78041 /* Components */,
-				51F9D2422ED74C9400E78041 /* Screens */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		51F9D2452ED74C9400E78041 /* HyTracker */ = {
 			isa = PBXGroup;
 			children = (
+				51CEFB092EDAFD5B00019A2F /* Features */,
+				51CEFB012EDAFC1900019A2F /* Core */,
+				511AE93A2EDA4B26003D3B31 /* Ressources */,
 				51BB762F2ED85DC200016CE2 /* Info.plist */,
 				51F9D2342ED74C9400E78041 /* App */,
-				51F9D2372ED74C9400E78041 /* Models */,
-				51F9D23A2ED74C9400E78041 /* Services */,
 				51F9D23C2ED74C9400E78041 /* ViewModels */,
-				51F9D2432ED74C9400E78041 /* Views */,
 			);
 			path = HyTracker;
 			sourceTree = "<group>";
@@ -217,6 +347,7 @@
 			name = HyTracker;
 			packageProductDependencies = (
 				51004C692ED9F8370026A651 /* SwiftNBT */,
+				515B32BE2EDB6C620043E124 /* SDWebImageSwiftUI */,
 			);
 			productName = HyTracker;
 			productReference = 510807B02ED5F2B00011629C /* HyTracker.app */;
@@ -248,6 +379,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				51004C682ED9F8370026A651 /* XCRemoteSwiftPackageReference "SwiftNBT" */,
+				515B32BD2EDB6C620043E124 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 510807B12ED5F2B00011629C /* Products */;
@@ -264,8 +396,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5108AF342EDCB44200640FFE /* Secrets.xcconfig in Resources */,
 				517AA1462ED657150003819F /* README.md in Resources */,
-				51004C782EDA49060026A651 /* LaunchScreen.storyboard in Resources */,
 				51BB762E2ED85D0600016CE2 /* icomoon.ttf in Resources */,
 				51F9D2462ED74C9400E78041 /* Assets.xcassets in Resources */,
 			);
@@ -278,23 +410,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5108AF322EDC751D00640FFE /* PetLevelData.swift in Sources */,
 				51F9D2472ED74C9400E78041 /* HyTrackerApp.swift in Sources */,
 				51F9D2482ED74C9400E78041 /* GameType.swift in Sources */,
+				51CEFB212EDB016300019A2F /* PlayerViewModel+Skyblock.swift in Sources */,
+				515B32C12EDB8FC70043E124 /* PlayerMinionsSheet.swift in Sources */,
 				51F9D2492ED74C9400E78041 /* RecentPlayer.swift in Sources */,
 				51F9D24A2ED74C9400E78041 /* HypixelAPI.swift in Sources */,
+				51F6C8842EDB0CA6009690FD /* PlayerCollectionsSheet.swift in Sources */,
 				51F9D24B2ED74C9400E78041 /* MojangAPI.swift in Sources */,
 				51004C702EDA354F0026A651 /* MinecraftTextParser.swift in Sources */,
+				51CEFB1C2EDAFE3F00019A2F /* SkyblockProfile.swift in Sources */,
+				515B32BC2EDB6B5B0043E124 /* ItemImageView.swift in Sources */,
 				51F9D2602ED7819700E78041 /* SkyblockComponents.swift in Sources */,
+				51CEFB132EDAFDC700019A2F /* HypixelPlayer.swift in Sources */,
+				51F6C8882EDB4F0E009690FD /* RessourceModels.swift in Sources */,
 				51BB762C2ED8586100016CE2 /* PlayerStatsSheet.swift in Sources */,
 				51F9D25A2ED7788C00E78041 /* SkyblockStyle.swift in Sources */,
+				51CEFB152EDAFDD200019A2F /* GameStats.swift in Sources */,
+				51F6C88A2EDB519D009690FD /* SkyblockResourceManager.swift in Sources */,
+				51CEFB1A2EDAFE3800019A2F /* SkyblockMember.swift in Sources */,
 				51F9D24C2ED74C9400E78041 /* PlayerViewModel.swift in Sources */,
+				5108AF362EDCB59600640FFE /* Env.swift in Sources */,
 				51F9D25C2ED780D400E78041 /* SkyblockCalculator.swift in Sources */,
 				51004C6C2ED9FA490026A651 /* SkyblockItem.swift in Sources */,
 				51F9D2582ED7723000E78041 /* SkyblockDashboardView.swift in Sources */,
 				51F9D24D2ED74C9400E78041 /* GameCardView.swift in Sources */,
 				51BB76312ED85E4000016CE2 /* SkyblockIcons.swift in Sources */,
+				51CEFB1F2EDB00BA00019A2F /* PlayerViewModel+Games.swift in Sources */,
+				51CEFB062EDAFD4D00019A2F /* Double+Formatting.swift in Sources */,
 				51004C6E2ED9FAA20026A651 /* InventoryService.swift in Sources */,
+				5108AF2C2EDC4DEE00640FFE /* MinionData.swift in Sources */,
 				51F9D24E2ED74C9400E78041 /* GameDetailView.swift in Sources */,
+				5108AF2E2EDC53A400640FFE /* PlayerPetsSheet.swift in Sources */,
 				51F9D24F2ED74C9400E78041 /* HomeView.swift in Sources */,
 				51004C742EDA45770026A651 /* PlayerSkillsSheet.swift in Sources */,
 				51F9D2502ED74C9400E78041 /* PlayerProfileView.swift in Sources */,
@@ -425,6 +573,7 @@
 		};
 		510807BC2ED5F2B20011629C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5108AF332EDCB44200640FFE /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -460,6 +609,7 @@
 		};
 		510807BD2ED5F2B20011629C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5108AF332EDCB44200640FFE /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -525,6 +675,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		515B32BD2EDB6C620043E124 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -532,6 +690,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 51004C682ED9F8370026A651 /* XCRemoteSwiftPackageReference "SwiftNBT" */;
 			productName = SwiftNBT;
+		};
+		515B32BE2EDB6C620043E124 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 515B32BD2EDB6C620043E124 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
